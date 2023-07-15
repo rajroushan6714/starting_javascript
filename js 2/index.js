@@ -26,9 +26,21 @@ let substr2 = str.substr(0, 5);
 document.getElementById("demo3").innerHTML = substr2;
 
 //replace
-const button = document.querySelector("button");
-button.addEventListener("click", act);
-function act() {
+const button1 = document.querySelector("#replace_button");
+button1.addEventListener("click", act1);
+function act1() {
     let text = document.getElementById("demo4").innerHTML;
     document.getElementById("demo4").innerHTML = text.replace("Apple", "Mango");
+}
+
+//toUpperCase // toLowerCase
+
+//concat method, plud method can also be used as js concat string if '+' sign is given.
+const button2 = document.querySelector("#concat_button");
+button2.addEventListener("click", act2);
+function act2(){
+    let text1 = document.getElementById("demo5").innerHTML;
+    let text2 = "Mango";
+    let text3 = text1.concat(", ", text2);
+    document.getElementById("demo5").innerHTML = text3;
 }

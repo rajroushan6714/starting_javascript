@@ -44,3 +44,28 @@ function act2(){
     let text3 = text1.concat(", ", text2);
     document.getElementById("demo5").innerHTML = text3;
 }
+
+
+// trim()-> remove white space from both end of the string.
+// trimStart()-> remove white spaces at the start of string.
+// trimEnd()-> remove white spaces at the end of the string.
+
+// padding=> padStart(), padEnd() doesn't work on number, convert no into string.
+// Both work in similar ways.
+let padstring = "5";
+document.getElementById("demo6").innerHTML = padstring.padStart(4, "0");
+
+// extracting characters of a string. It has 3 methods.
+// charAt(i)-> return the character present at ith position in the string.
+// charCodeAt(i)-> return the code of the character present at ith position in the string.
+// propertyAccess => []-> allows property access on strings.
+
+// strings can be converted into arrays.
+// split()-> it is used to convert string into array.
+const button3 = document.querySelector("#array_button");
+button3.addEventListener("click", act3);
+function act3(){
+    let text = document.getElementById("demo7").innerHTML;
+    const myArray = text.split(", ");
+    document.getElementById("demo7").innerHTML = myArray[1];
+}

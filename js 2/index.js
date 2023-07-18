@@ -69,3 +69,24 @@ function act3(){
     const myArray = text.split(", ");
     document.getElementById("demo7").innerHTML = myArray[1];
 }
+
+//using ternary operators 
+// adding query selector on the select element and html element.
+const select = document.querySelector("select");
+const html = document.querySelector("html");
+
+// adding eventlistener to record the change in the the value of select element. and calling the function
+select.addEventListener("change", act4);
+
+function act4 (){
+    select.value === "black" 
+    ? update("black", "white") 
+    : update("white", "black")
+}
+
+function update(bgColor , textColour){
+    // updating background color of the entire html file
+    html.style.backgroundColor = bgColor;
+    // updating text color of the entire html file
+    html.style.color = textColour;
+}

@@ -8,7 +8,7 @@ console.log(length);
 //extraction string parts "slice(start, end), substring(start, end) , substr(start, length)"
 //slice -> extract a part of string and return the extract part.
 // takes two parameter: start position and end position (end is not included).
-// if we omit the second parameter it will 
+// if we omit the second parameter it will
 let text = "Apple, Banana, Kiwi";
 document.getElementById("demo0").innerHTML = text;
 
@@ -70,7 +70,7 @@ function act3(){
     document.getElementById("demo7").innerHTML = myArray[1];
 }
 
-//using ternary operators 
+//using ternary operators
 // adding query selector on the select element and html element.
 const select = document.querySelector("select");
 const html = document.querySelector("html");
@@ -79,8 +79,8 @@ const html = document.querySelector("html");
 select.addEventListener("change", act4);
 
 function act4 (){
-    select.value === "black" 
-    ? update("black", "white") 
+    select.value === "black"
+    ? update("black", "white")
     : update("white", "black")
 }
 

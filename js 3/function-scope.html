@@ -10,6 +10,26 @@
     <script>
 
         const x = 1;
+        
+        function add7 (x){
+            return x + 7;
+        }
+
+        function multiply(x, y){
+            return x * y;
+        }
+
+        function capitalize(s){
+            // it can be done via slice , charAt , replace, split , es6 spread.
+            let arr = s.split('');
+            let s2 = arr.map((char, index) => index === 0 ? char.toUpperCase() : char).join('');
+            return s2;
+        }
+
+        function lastletter(s){
+            let l = s.length;
+            return s.charAt(l - 1);
+        }
 
         function a() {
             const y = 2;

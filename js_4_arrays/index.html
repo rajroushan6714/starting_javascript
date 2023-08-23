@@ -10,7 +10,12 @@
     <h2>Creating undefined holes.</h2>
     <p>Adding elements with higher indexes leads to undefined holes in the array.</p>
     <p id="demo"></p>
+    <h1> javascript Maps.</h1>
+    <p id="demoMap"></p>
+    <h2>Filter.</h2>
+    <p id="demoFilter"></p>
     <script>
+        // associative arrays are also called hashes. javascript doesn't support hash or associative array.
         // we can also use html tags in js in this way.
         let fruits = ["Banana", "Apple", "Mango"];
         fruits[5] = "Lemon";
@@ -21,6 +26,35 @@
         }
         text += "</ul>";
         document.getElementById("demo").innerHTML = text;
+        
+        // map
+        function toUpper(string){
+            return string.toUpperCase();
+        }
+
+        const cats = ["Leopard", "Tiger", "Jaguar", "Lion"];
+        
+        const upperCats = cats.map(toUpper);
+        let text1 = "<ul>";
+        for(let i = 0 ; i < upperCats.length ; i++){
+            text1 += "<li>" + upperCats[i] + "</li>" ;
+        }
+        text1 += "</ul>";
+        document.getElementById("demoMap").innerHTML = text1;
+
+        // filter
+        // here lCat returns boolean if it returns true the value is added
+        // else it is ignored.
+        function lCat(cat){
+            return cat.startsWith("L");
+        }
+        const filteredCat = cats.filter(lCat);
+        let text2 = "<ul>";
+        for(let i = 0 ; i < filteredCat.length ; i++){
+            text2 += "<li>" + filteredCat[i] + "</li>" ;
+        }
+        text2 += "</ul>";
+        document.getElementById("demoFilter").innerHTML = text2;
     </script>
 </body>
 </html>

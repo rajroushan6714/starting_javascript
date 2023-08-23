@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Arrays.</h1>
+    <h2>Creating undefined holes.</h2>
+    <p>Adding elements with higher indexes leads to undefined holes in the array.</p>
+    <p id="demo"></p>
+    <script>
+        // we can also use html tags in js in this way.
+        let fruits = ["Banana", "Apple", "Mango"];
+        fruits[5] = "Lemon";
+        let flen = fruits.length;
+        let text = "<ul>";
+        for(let i = 0 ; i < flen ; i++){
+            text += "<li>" + fruits[i] + "</li>" ;
+        }
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

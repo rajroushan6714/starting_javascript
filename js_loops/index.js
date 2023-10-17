@@ -24,3 +24,19 @@ function draw() {
 }
 
 btn.addEventListener("click", draw);
+
+const result = document.querySelector("#results");
+
+function calculate() {
+    for(let i = 1 ; i <= 10 ;i++){
+        const newResult = `${i} * ${i} = ${i * i}`;
+        result.textContent += `${newResult}\n`;
+    }
+    result.textContent += "\nFinished!";
+}
+
+const calculateBtn = document.querySelector("#calculate");
+const clear = document.querySelector("#clear");
+
+calculateBtn.addEventListener("click", calculate);
+clear.addEventListener("click", () => (result.textContent = ""));

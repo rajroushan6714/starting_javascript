@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function isEmpty(input){
+            let i = 0;
+            for(let key in input){
+                return false;
+            }
+            return true;
+        }
+
+        let user = {};
+        user.name = "John";
+        user.surname = "Smith";
+        user.age = 20;
+        alert(user.name);
+        let schedule = {};
+        alert(isEmpty(schedule));
+
+        let salaries = {
+            John: 100,
+            Ann: 150,
+            Raj: 200,
+        }
+
+        let sum = 0;
+
+        for(let key in salaries){
+            sum += salaries[key];
+        }
+        alert(sum);
+
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My Menu",
+        };
+
+        for(let key in menu){
+            if(typeof menu[key] == "number"){
+                menu[key] = 2 * menu[key];
+            }
+        }
+
+        alert(menu.height);
+
+    </script>
+</body>
+</html>
